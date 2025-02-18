@@ -1,25 +1,37 @@
-import logo from './logo.svg';
 import './App.css';
+import { BrowserRouter as Router, Route, Routes, useLocation } from "react-router-dom";
+import LoginRegister from './Components/Authentication/Form/login';
+import Admin from './Components/AdminPanel/Admin';
+import StudentDashboard from './Components/StudentPanel/studentPanel';
+
+
+function PageContent() {
+    const location = useLocation();
+
+    const getPageClass = () => {
+        if (location.pathname === '/login') return 'login-register';
+        if (location.pathname === '/admin') return 'admin-page';
+        return '';
+    };
+
+    return (
+        <div className={`App ${getPageClass()}`}>
+            <Routes>
+                <Route path="/" element={<LoginRegister />} />
+                <Route path="/admin" element={<Admin/>}/>
+                <Route path="/student/dashboard/" element={<StudentDashboard />} />
+                <Route path="admin/student/dashboard/" element={<StudentDashboard />} />
+            </Routes>
+        </div>
+    );
+}
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <Router>
+            <PageContent />
+        </Router>
+    );
 }
 
 export default App;
