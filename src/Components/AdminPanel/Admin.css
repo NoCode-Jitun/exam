@@ -379,3 +379,129 @@
 .card-inner > .card_icon {
   font-size: 25px;
 }
+
+/*exam form create*/
+body{
+  background-color: #dcdbdb;
+  
+}
+.create-exam-container {
+  width: 140vh;
+  margin: 30px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; 
+  height: auto; 
+}
+
+.create-exam-container h1 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Form Group Styles */
+.form-group {
+  margin-bottom: 15px;
+  width: 100%; /* Ensures form inputs take full width */
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #555;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+/* Questions Section Styles */
+.questions-section {
+  margin-top: 20px;
+  width: 100%; /* Ensures questions section takes full width */
+}
+
+.questions-section h3 {
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.question-group {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.question-group .form-group {
+  flex: 1;
+}
+
+.remove-question-btn {
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.remove-question-btn:hover {
+  background-color: #ff1a1a;
+}
+
+.add-question-btn {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+.add-question-btn:hover {
+  background-color: #45a049;
+}
+
+/* Submit Button Styles */
+.submit-btn {
+  width: 100%;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 5px;
+  font-size: 18px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.submit-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .question-group {
+      flex-direction: column;
+  }
+
+  .remove-question-btn {
+      width: 100%;
+      margin-top: 10px;
+  }
+}
